@@ -1,5 +1,27 @@
-npx create-react-app my-app
-cd my-app
-npm start
-
 import React from 'react';
+
+function App(props) {
+  return<h1>Hello, {props.name}
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <h1>Hello, {this.props.name}</h1>
+    );
+  }
+}
+
+function App() {
+  return (
+    <div>
+      <Hello name="Ann" />
+      <Hello name="Peter" />
+    </div>
+  );
+}
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
